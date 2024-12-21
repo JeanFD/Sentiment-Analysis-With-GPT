@@ -1,9 +1,7 @@
 import os
 import json
-import openai
-import tiktoken
 import threading
-from openai import OpenAI
+from openai import OpenAI, APIError
 from dotenv import load_dotenv
 import pandas as pd
 
@@ -63,7 +61,7 @@ def analisador_sentimentos(entrada):
             temperature=0
         )
         texto_resposta = resposta.choices[0].message.content
-    except openai.APIError as e:
+    except APIError as e:
         print(f"Erro de API: {e}")
     
     return texto_resposta, resposta
