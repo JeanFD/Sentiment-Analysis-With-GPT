@@ -16,7 +16,6 @@ Este repositório contém um script Python para análise automatizada de sentime
   - `os`
   - `json`
   - `openai`
-  - `tiktoken`
   - `threading`
   - `dotenv`
   - `pandas`
